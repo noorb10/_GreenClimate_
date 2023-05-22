@@ -10,8 +10,6 @@ from .models import *
 from .forms import CreateUserForm, ClientForm
 from .decorators import unauthenticated_user, allowed_users
 
-
-
 @unauthenticated_user
 def signup_user(request):
 	form = CreateUserForm()

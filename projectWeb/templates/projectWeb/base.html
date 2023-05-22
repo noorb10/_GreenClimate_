@@ -45,35 +45,35 @@
                 <a class="nav-link" href="{% url 'home' %}#">FAQ</a>
             </li>
             <li class="nav-item">
-{#                <a class="nav-link" href="{% url 'donate' %}">Donate</a>#}
+                <a class="nav-link" href="{% url 'donate' %}">Donate</a>
             </li>
             {% if request.user.is_staff %}
               <li class="nav-item">
-{#                <a class="nav-link" href="{% url 'admin:index' %}">Admin</a>#}
+                <a class="nav-link" href="{% url 'admin:index' %}">Admin</a>
             </li>
             {% elif user.is_authenticated %}
             <li class="nav-item">
-{#                <a class="nav-link" href="{% url 'community' %}">Community</a>#}
+                <a class="nav-link" href="{% url 'community' %}">Community</a>
             </li>
             <li class="nav-item">
-{#                <a class="nav-link" href="{% url 'user_page' %}">Profile</a>#}
+                <a class="nav-link" href="{% url 'user_page' %}">Profile</a>
             </li>
             <li class="nav-item">
-{#                <a class="nav-link" href="{% url 'settings' %}">Settings</a>#}
+               <a class="nav-link" href="{% url 'settings' %}">Settings</a>
             </li>
             {% endif %}
 
             {% if user.is_authenticated %}
             <span style="font-size: 20px; margin-top: 1px;"> Welcome, <strong>{{request.user}}</strong> </span>
             <li class="nav-item">
-{#                <a class="btn btn-outline-success ms-lg-3" href="{% url 'logout' %}" role="button">Log-out</a>#}
+                <a class="btn btn-outline-success ms-lg-3" href="{% url 'logout' %}" role="button">Log-out</a>
             </li>
             {% else %}
             <li class="nav-item">
-{#                <a class="btn btn-outline-success ms-lg-3" href="{% url 'signup' %}" role="button">Register</a>#}
+                <a class="btn btn-outline-success ms-lg-3" href="{% url 'signup' %}" role="button">Register</a>
             </li>
             <li class="nav-item">
-{#                <a class="btn btn-outline-success ms-lg-3" href="{% url 'login' %}" role="button">Login</a>#}
+                <a class="btn btn-outline-success ms-lg-3" href="{% url 'login' %}" role="button">Login</a>
             </li>
             {% endif %}
             </ul>
